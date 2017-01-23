@@ -1,6 +1,8 @@
-<h1>
-  {{title}}
-</h1>
+<nav>
+  <ul>
+    <li><a [routerLink]="['/areas-of-law']" href="">Areas of law</a></li>
+    <li><a [routerLink]="['/subscription-plans']" href="">Subscription plans</a></li>
+  </ul>
+</nav>
 
-
-
+<router-outlet></router-outlet>

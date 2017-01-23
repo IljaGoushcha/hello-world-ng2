@@ -8,18 +8,20 @@ import { AppComponent } from './app.component';
 import { AreaOfLawComponent } from './areas-of-law/area-of-law.component';
 import { SubscriptionPlanComponent } from './subscription-plans/subscription-plan.component';
 
-import {AppRoutingModule} from './routing/app-routing.module';
+import { AppRoutingModule, routableComponents } from './routing/app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     AreaOfLawComponent,
-    SubscriptionPlanComponent
+    SubscriptionPlanComponent,
+    routableComponents
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [

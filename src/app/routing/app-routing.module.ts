@@ -3,13 +3,17 @@
  */
 
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, Route } from '@angular/router';
+
+import { AreaOfLawComponent } from '../areas-of-law/area-of-law.component';
+import { SubscriptionPlanComponent } from '../subscription-plans/subscription-plan.component';
+
 
 const routes: Routes = [
-  { path: '', pathMathch: 'full', redirectTo: 'areas-of-law' },
-  { path: 'areas-of-law', component: 'AreaOfLawComponent' },
-  { path: 'subscription-plans', component: 'SubscriptionPlanComponent' },
-  { path: '**', pathMatch: 'full', component: 'PageNotFoundComponent' }
+  // new Route({ path: '', pathMathch: 'full', redirectTo: 'areas-of-law' }),
+  { path: 'areas-of-law', component: AreaOfLawComponent },
+  { path: 'subscription-plans', component: SubscriptionPlanComponent }
+  // { path: '**', pathMatch: 'full', component: 'PageNotFoundComponent' }
 ];
 
 @NgModule({
@@ -22,6 +26,6 @@ const routes: Routes = [
 export class AppRoutingModule { }
 
 export const  routableComponents = [
-  // AreaOfLawComponent,
-  // SubscriptionPlanComponent
+  AreaOfLawComponent,
+  SubscriptionPlanComponent
 ];
