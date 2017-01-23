@@ -5,14 +5,16 @@ import { HttpModule } from '@angular/http';
 import 'rxjs/Observable';
 
 import { AppComponent } from './app.component';
-import { AreaOfLawComponent } from './area-of-law/area-of-law.component';
+import { AreaOfLawComponent } from './areas-of-law/area-of-law.component';
+import { SubscriptionPlanComponent } from './subscription-plans/subscription-plan.component';
 
-import { AreaOfLawService } from './area-of-law/area-of-law.service';
+import {AppRoutingModule} from './routing/app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AreaOfLawComponent
+    AreaOfLawComponent,
+    SubscriptionPlanComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,8 @@ import { AreaOfLawService } from './area-of-law/area-of-law.service';
   providers: [],
   bootstrap: [
     AppComponent,
-    AreaOfLawComponent
+    AreaOfLawComponent,
+    SubscriptionPlanComponent
   ]
 })
 export class AppModule { }

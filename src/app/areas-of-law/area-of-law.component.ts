@@ -14,7 +14,7 @@ import { AreaOfLaw } from './area-of-law';
 })
 export class AreaOfLawComponent {
   areasOfLaw: AreaOfLaw[];
-  errorMessage: string = 'error when getting areas of law!';
+  errorMessage: string = 'error getting areas of law!';
 
   constructor(private areaOfLawService: AreaOfLawService) {
     this.areaOfLawService.getAreasOfLaw()
