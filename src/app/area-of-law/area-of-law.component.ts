@@ -14,14 +14,12 @@ import { AreaOfLaw } from './area-of-law';
 })
 export class AreaOfLawComponent {
   areasOfLaw: AreaOfLaw[];
-  areasOfLawX: AreaOfLaw[];
   errorMessage: string = 'error when getting areas of law!';
 
   constructor(private areaOfLawService: AreaOfLawService) {
-    // this.areasOfLaw = this.areaOfLawService.getAreasOfLaw();
-    this.areaOfLawService.getAreasOfLawX()
+    this.areaOfLawService.getAreasOfLaw()
       .subscribe(
-        areasOfLawX => this.areasOfLawX = areasOfLawX,
+        areasOfLaw => this.areasOfLaw = areasOfLaw,
         error => this.errorMessage = <any>error
       );
   };

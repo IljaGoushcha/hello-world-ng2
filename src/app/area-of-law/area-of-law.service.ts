@@ -15,31 +15,11 @@ export class AreaOfLawService {
 
   constructor(private http: Http) {};
 
-  areasOfLaw: AreaOfLaw[] = [
-    new AreaOfLaw(1, 'bankruptcy'),
-    new AreaOfLaw(2, 'family'),
-    new AreaOfLaw(3, 'tort'),
-    new AreaOfLaw(4, 'other'),
-  ];
-
   getAreasOfLaw() {
-    return this.areasOfLaw;
-  };
-
-  getAreasOfLawX() {
     return this.http.get('http://localhost:3000/api/areas-of-law')
-      .do(data => console.log(data))
-      .map((response: Response) => <AreaOfLaw[]>response.json().data)
+      .map((response: Response) => response.json())
       .catch(this.handleError);
   };
-
-  // getVehicles() {
-  //   return this.http
-  //     .get('api/vehicles.json')
-  //     .map((response: Response) => <Vehicle[]>response.json().data)
-  //     // .do(data => console.log(data))
-  //     .catch(this.handleError);
-  // }
 
   private handleError(error: Response) {
     console.error(error);
